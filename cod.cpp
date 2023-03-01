@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-							// !!! NOT: deðiþkenler ve fonksiyonlar ingilizce isimlendirilmiiþtir. Bunun sebebi- 
-							// ingilizcenin unutulmasýný engellemek ve geliþtirmektir...
+
 	struct foodlist{
 		char food_name[200];
 		int foodgram;
@@ -13,9 +12,9 @@
 	struct foodlist *first=NULL;
 	struct foodlist *andd=NULL;
 		
-	FILE *fl=fopen("\\Users\\enest\\Desktop_2\\2.sýnýf\\veri yapýlarý\\odev_1\\menu.txt","r+a");  // menu dosyasýný okuma+yazma formatýnda açar
+	FILE *fl=fopen("\\Users\\enest\\Desktop_2\\2.sÄ±nÄ±f\\veri yapÄ±larÄ±\\odev_1\\menu.txt","r+a");  // menu dosyasï¿½nï¿½ okuma+yazma formatï¿½nda aï¿½ar
 
-	void preparation(){		 	       // txt deki verileri listeye alma (ön hazýrlýk)
+	void preparation(){		 	       // txt deki verileri listeye alma (ï¿½n hazï¿½rlï¿½k)
 		
 		while(!feof(fl)){ 
 			struct foodlist *temp=(struct foodlist*) malloc(sizeof(struct foodlist));
@@ -54,7 +53,7 @@
 		}	
 	}
 
-	void addfood(){		               // kullanýcýnýn girdiði yemeði sýralý olarak listeye ve txt ye kaydetme...
+	void addfood(){		               // kullanï¿½cï¿½nï¿½n girdiï¿½i yemeï¿½i sï¿½ralï¿½ olarak listeye ve txt ye kaydetme...
 	char gecici[100];
 		struct foodlist *temp=(struct foodlist*) malloc(sizeof(struct foodlist));
 		struct foodlist *iter=temp;
@@ -187,7 +186,7 @@
 	void exit(){
 		struct foodlist *temp=first;
 		fclose(fl);
-		FILE *fl=fopen("menu.txt","w");  // txt yi açar içindeki herþeyi siler
+		FILE *fl=fopen("menu.txt","w");  // txt yi aï¿½ar iï¿½indeki herï¿½eyi siler
 
 		do{
 		fprintf(fl,"%s",temp->food_name);
@@ -207,7 +206,7 @@
 	}
 	
 int main(){
-	preparation();  // ilk kod baþladýðýnda txtdeki verileri listeye sýralý olarak kaydeder..
+	preparation();  // ilk kod baï¿½ladï¿½ï¿½ï¿½nda txtdeki verileri listeye sï¿½ralï¿½ olarak kaydeder..
 	int i=0,exitt=0;
 	while(1){
 		if(exitt==1){
